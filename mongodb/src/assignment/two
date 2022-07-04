@@ -1,0 +1,395 @@
+population> db.zipcodes.find({$and:[{city: "ATLANTA"},{state:"GA"}]})
+[
+  {
+    _id: '30303',
+    city: 'ATLANTA',
+    loc: [ -84.388846, 33.752504 ],
+    pop: 1845,
+    state: 'GA'
+  },
+  {
+    _id: '30305',
+    city: 'ATLANTA',
+    loc: [ -84.385145, 33.831963 ],
+    pop: 19122,
+    state: 'GA'
+  },
+  {
+    _id: '30306',
+    city: 'ATLANTA',
+    loc: [ -84.351418, 33.786027 ],
+    pop: 20081,
+    state: 'GA'
+  },
+  {
+    _id: '30307',
+    city: 'ATLANTA',
+    loc: [ -84.335957, 33.769138 ],
+    pop: 16330,
+    state: 'GA'
+  },
+  {
+    _id: '30308',
+    city: 'ATLANTA',
+    loc: [ -84.375744, 33.771839 ],
+    pop: 8549,
+    state: 'GA'
+  },
+  {
+    _id: '30309',
+    city: 'ATLANTA',
+    loc: [ -84.388338, 33.798407 ],
+    pop: 14766,
+    state: 'GA'
+  },
+  {
+    _id: '30310',
+    city: 'ATLANTA',
+    loc: [ -84.423173, 33.727849 ],
+    pop: 34017,
+    state: 'GA'
+  },
+  {
+    _id: '30311',
+    city: 'ATLANTA',
+    loc: [ -84.470219, 33.722957 ],
+    pop: 34880,
+    state: 'GA'
+  },
+  {
+    _id: '30312',
+    city: 'ATLANTA',
+    loc: [ -84.378125, 33.746749 ],
+    pop: 17683,
+    state: 'GA'
+  },
+  {
+    _id: '30313',
+    city: 'ATLANTA',
+    loc: [ -84.39352, 33.76825 ],
+    pop: 8038,
+    state: 'GA'
+  },
+  {
+    _id: '30314',
+    city: 'ATLANTA',
+    loc: [ -84.425546, 33.756103 ],
+    pop: 26649,
+    state: 'GA'
+  },
+  {
+    _id: '30315',
+    city: 'ATLANTA',
+    loc: [ -84.380771, 33.705062 ],
+    pop: 41061,
+    state: 'GA'
+  },
+  {
+    _id: '30316',
+    city: 'ATLANTA',
+    loc: [ -84.333913, 33.721686 ],
+    pop: 34668,
+    state: 'GA'
+  },
+  {
+    _id: '30317',
+    city: 'ATLANTA',
+    loc: [ -84.31685, 33.749788 ],
+    pop: 16395,
+    state: 'GA'
+  },
+  {
+    _id: '30318',
+    city: 'ATLANTA',
+    loc: [ -84.445432, 33.786454 ],
+    pop: 53894,
+    state: 'GA'
+  },
+  {
+    _id: '30319',
+    city: 'ATLANTA',
+    loc: [ -84.335091, 33.868728 ],
+    pop: 32138,
+    state: 'GA'
+  },
+  {
+    _id: '30324',
+    city: 'ATLANTA',
+    loc: [ -84.354867, 33.820609 ],
+    pop: 15044,
+    state: 'GA'
+  },
+  {
+    _id: '30326',
+    city: 'ATLANTA',
+    loc: [ -84.358232, 33.848168 ],
+    pop: 125,
+    state: 'GA'
+  },
+  {
+    _id: '30327',
+    city: 'ATLANTA',
+    loc: [ -84.419966, 33.862723 ],
+    pop: 18467,
+    state: 'GA'
+  },
+  {
+    _id: '30329',
+    city: 'ATLANTA',
+    loc: [ -84.321402, 33.823555 ],
+    pop: 17013,
+    state: 'GA'
+  }
+]
+Type "it" for more
+
+-------------------$match-----------------------------------------------------------
+population> db.zipcodes.aggregate([{$match:{$and:[{city: "ATLANTA"},{state:"GA"}]}}])
+[
+  {
+    _id: '30303',
+    city: 'ATLANTA',
+    loc: [ -84.388846, 33.752504 ],
+    pop: 1845,
+    state: 'GA'
+  },
+  {
+    _id: '30305',
+    city: 'ATLANTA',
+    loc: [ -84.385145, 33.831963 ],
+    pop: 19122,
+    state: 'GA'
+  },
+  {
+    _id: '30306',
+    city: 'ATLANTA',
+    loc: [ -84.351418, 33.786027 ],
+    pop: 20081,
+    state: 'GA'
+  },
+  {
+    _id: '30307',
+    city: 'ATLANTA',
+    loc: [ -84.335957, 33.769138 ],
+    pop: 16330,
+    state: 'GA'
+  },
+  {
+    _id: '30308',
+    city: 'ATLANTA',
+    loc: [ -84.375744, 33.771839 ],
+    pop: 8549,
+    state: 'GA'
+  },
+  {
+    _id: '30309',
+    city: 'ATLANTA',
+    loc: [ -84.388338, 33.798407 ],
+    pop: 14766,
+    state: 'GA'
+  },
+  {
+    _id: '30310',
+    city: 'ATLANTA',
+    loc: [ -84.423173, 33.727849 ],
+    pop: 34017,
+    state: 'GA'
+  },
+  {
+    _id: '30311',
+    city: 'ATLANTA',
+    loc: [ -84.470219, 33.722957 ],
+    pop: 34880,
+    state: 'GA'
+  },
+  {
+    _id: '30312',
+    city: 'ATLANTA',
+    loc: [ -84.378125, 33.746749 ],
+    pop: 17683,
+    state: 'GA'
+  },
+  {
+    _id: '30313',
+    city: 'ATLANTA',
+    loc: [ -84.39352, 33.76825 ],
+    pop: 8038,
+    state: 'GA'
+  },
+  {
+    _id: '30314',
+    city: 'ATLANTA',
+    loc: [ -84.425546, 33.756103 ],
+    pop: 26649,
+    state: 'GA'
+  },
+  {
+    _id: '30315',
+    city: 'ATLANTA',
+    loc: [ -84.380771, 33.705062 ],
+    pop: 41061,
+    state: 'GA'
+  },
+  {
+    _id: '30316',
+    city: 'ATLANTA',
+    loc: [ -84.333913, 33.721686 ],
+    pop: 34668,
+    state: 'GA'
+  },
+  {
+    _id: '30317',
+    city: 'ATLANTA',
+    loc: [ -84.31685, 33.749788 ],
+    pop: 16395,
+    state: 'GA'
+  },
+  {
+    _id: '30318',
+    city: 'ATLANTA',
+    loc: [ -84.445432, 33.786454 ],
+    pop: 53894,
+    state: 'GA'
+  },
+  {
+    _id: '30319',
+    city: 'ATLANTA',
+    loc: [ -84.335091, 33.868728 ],
+    pop: 32138,
+    state: 'GA'
+  },
+  {
+    _id: '30324',
+    city: 'ATLANTA',
+    loc: [ -84.354867, 33.820609 ],
+    pop: 15044,
+    state: 'GA'
+  },
+  {
+    _id: '30326',
+    city: 'ATLANTA',
+    loc: [ -84.358232, 33.848168 ],
+    pop: 125,
+    state: 'GA'
+  },
+  {
+    _id: '30327',
+    city: 'ATLANTA',
+    loc: [ -84.419966, 33.862723 ],
+    pop: 18467,
+    state: 'GA'
+  },
+  {
+    _id: '30329',
+    city: 'ATLANTA',
+    loc: [ -84.321402, 33.823555 ],
+    pop: 17013,
+    state: 'GA'
+-------------------------------------count of zipcodes of atlanta---------------------------
+Atlas atlas-2c03rv-shard-0 [primary] population> db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"$city",zipcodes:{$count:{}}}}])
+[ { _id: 'ATLANTA', zipcodes: 41 } ]
+------------------------------total population of Atlanta--------------------------------------------
+db.zipcodes.aggregate([{$match:{city:"ATLANTA"}}, { $group: { _id: { city: "$city" }, pop: { $sum: "$pop" } } }])
+[ { _id: { city: 'ATLANTA' }, pop: 630046 } ]
+
+-------------Population by State-------------------------
+population> db.zipcodes.aggregate([ { $group: { _id: { state: "$state" }, pop: { $sum: "$pop" } } }])
+[
+  { _id: { state: 'TX' }, pop: 16984601 },
+  { _id: { state: 'NY' }, pop: 17990402 },
+  { _id: { state: 'WV' }, pop: 1793146 },
+  { _id: { state: 'CO' }, pop: 3293755 },
+  { _id: { state: 'NJ' }, pop: 7730188 },
+  { _id: { state: 'OH' }, pop: 10846517 },
+  { _id: { state: 'CT' }, pop: 3287116 },
+  { _id: { state: 'SC' }, pop: 3486703 },
+  { _id: { state: 'ME' }, pop: 1226648 },
+  { _id: { state: 'WY' }, pop: 453528 },
+  { _id: { state: 'NH' }, pop: 1109252 },
+  { _id: { state: 'MN' }, pop: 4372982 },
+  { _id: { state: 'MA' }, pop: 6016425 },
+  { _id: { state: 'ID' }, pop: 1006749 },
+  { _id: { state: 'NE' }, pop: 1578139 },
+  { _id: { state: 'VA' }, pop: 6181479 },
+  { _id: { state: 'VT' }, pop: 562758 },
+  { _id: { state: 'NM' }, pop: 1515069 },
+  { _id: { state: 'AZ' }, pop: 3665228 },
+  { _id: { state: 'PA' }, pop: 11881643 }
+-------------------------------------------------sort population from highest to lowest-----------
+db.zipcodes.aggregate([ { $group: { _id: { state: "$state" }, pop: { $sum: "$pop" } } },{ $sort: { pop: -1 } }])
+[
+  { _id: { state: 'CA' }, pop: 29754890 },
+  { _id: { state: 'NY' }, pop: 17990402 },
+  { _id: { state: 'TX' }, pop: 16984601 },
+  { _id: { state: 'FL' }, pop: 12686644 },
+  { _id: { state: 'PA' }, pop: 11881643 },
+  { _id: { state: 'IL' }, pop: 11427576 },
+  { _id: { state: 'OH' }, pop: 10846517 },
+  { _id: { state: 'MI' }, pop: 9295297 },
+  { _id: { state: 'NJ' }, pop: 7730188 },
+  { _id: { state: 'NC' }, pop: 6628637 },
+  { _id: { state: 'GA' }, pop: 6478216 },
+  { _id: { state: 'VA' }, pop: 6181479 },
+  { _id: { state: 'MA' }, pop: 6016425 },
+  { _id: { state: 'IN' }, pop: 5544136 },
+  { _id: { state: 'MO' }, pop: 5110648 },
+  { _id: { state: 'WI' }, pop: 4891769 },
+  { _id: { state: 'TN' }, pop: 4876457 },
+  { _id: { state: 'WA' }, pop: 4866692 },
+  { _id: { state: 'MD' }, pop: 4781379 },
+  { _id: { state: 'MN' }, pop: 4372982 }
+]
+-----------------------------------top three---------------
+[23:26] Venkat Ramana Reddy, Nomula
+db.zipcodes.aggregate([{ $group: { _id: { state: "$state" }, pop: { $sum: "$pop" } } }, { $sort: { pop: -1 } }, { "$limit": 3 }])
+[
+  { _id: { state: 'CA' }, pop: 29754890 },
+  { _id: { state: 'NY' }, pop: 17990402 },
+  { _id: { state: 'TX' }, pop: 16984601 }
+
+]
+---------------------------------------------------
+db.zipcodes.aggregate([{ $group: { _id: { city: "$city" }, pop: { $sum: "$pop" } } }, { $sort: { pop: -1 } }, { "$limit": 3 }])
+
+db.zipcodes.aggregate([{ $group: { _id: { city: "$city" }, pop: { $sum: "$pop" } } }, { $sort: { pop: -1 } }])
+
+db.zipcodes.aggregate([{$match:{state:"TX"}}, { $group: { _id: { state:"$state", city: "$city" }} }, { $sort: { pop: -1 } },{ "$limit": 3 }])
+[
+  { _id: { state: 'TX', city: 'WALLER' } },
+  { _id: { state: 'TX', city: 'KRESS' } },
+  { _id: { state: 'TX', city: 'GLAZIER' } }
+]
+
+----------------------------------------------------Bonus----------------------------------------
+
+db.zipcodes.aggregate([{ $group: { _id: {state:"$state" }, pop: { $avg: "$pop" } } }, { $sort: { pop: -1 } }])
+[
+  { _id: { state: 'DC' }, pop: 25287.5 },
+  { _id: { state: 'CA' }, pop: 19627.236147757256 },
+  { _id: { state: 'FL' }, pop: 15779.407960199005 },
+  { _id: { state: 'RI' }, pop: 14539.391304347826 },
+  { _id: { state: 'NJ' }, pop: 14315.162962962962 },
+  { _id: { state: 'HI' }, pop: 13852.8625 },
+  { _id: { state: 'AZ' }, pop: 13574.918518518518 },
+  { _id: { state: 'MA' }, pop: 12692.879746835442 },
+  { _id: { state: 'DE' }, pop: 12569.207547169812 },
+  { _id: { state: 'CT' }, pop: 12498.539923954373 },
+  { _id: { state: 'NV' }, pop: 11556.086538461539 },
+  { _id: { state: 'MD' }, pop: 11384.235714285714 },
+  { _id: { state: 'NY' }, pop: 11279.248902821317 },
+  { _id: { state: 'OH' }, pop: 10771.119165839125 },
+  { _id: { state: 'MI' }, pop: 10611.069634703197 },
+  { _id: { state: 'GA' }, pop: 10201.914960629922 },
+  { _id: { state: 'TX' }, pop: 10164.333333333334 },
+  { _id: { state: 'WA' }, pop: 10055.148760330578 },
+  { _id: { state: 'SC' }, pop: 9962.00857142857 },
+  { _id: { state: 'NC' }, pop: 9402.321985815603 }
+]
+
+db.zipcodes.aggregate([{ $group: { _id: {state:"$state" }, pop: { $avg: "$pop" } } }, { $sort: { pop: -1 } }, { "$limit": 3 }])
+[
+  { _id: { state: 'DC' }, pop: 25287.5 },
+  { _id: { state: 'CA' }, pop: 19627.236147757256 },
+  { _id: { state: 'FL' }, pop: 15779.407960199005 }
+] { _id: { state: 'TX' }, pop: 16984601 }
+
